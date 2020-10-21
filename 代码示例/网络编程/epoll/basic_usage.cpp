@@ -20,7 +20,7 @@ int main() {
 
     struct epoll_event event;
     event.events |= EPOLLIN;
-    event.events |= EPOLLET; //是否打开ET
+    event.events |= EPOLLET; //是否打开ET 
     event.data.fd = STDIN_FILENO;
     if (epoll_ctl(epfd, EPOLL_CTL_ADD, STDIN_FILENO, &event) < 0) {
         fprintf(stderr, "epoll_ctl failed[%s]\n", strerror(errno));

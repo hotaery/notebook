@@ -1,8 +1,0 @@
-cmake_minimum_required(VERSION 3.10)
-project(network_program_common)
-file(GLOB SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
-include_directories(${CMAKE_INSTALL_PREFIX}/include)
-add_library(common_lib STATIC ${SOURCES})
-file(GLOB HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
-install(TARGETS common_lib ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
-install(FILES ${HEADERS} DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
